@@ -4,7 +4,7 @@ def sum_number_lists(list1, list2):
     if len(list1) != len(list2):
         return "The lists are different lengths."
 
-    if not all(isinstance(x, (int, float)) for x in list1) or not all(isinstance(x, (int, float)) for x in list2):
+    if not all(isinstance(x, (int, float)) for x in list1 + list2):
         return "One of the lists has a non-number character."
 
     return [x + y for x, y in zip(list1, list2)]
